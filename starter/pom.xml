@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>iot-datastore</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.testcontainers</groupId>
+      <artifactId>testcontainers-bom</artifactId>
+      <version>1.20.4</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.11.4</version>
+    <scope>test</scope>
+  </dependency>
+
+
+  <dependency>
+    <groupId>com.ongres.scram</groupId>
+    <artifactId>client</artifactId>
+    <version>2.1</version>
+    <optional>true</optional>
+  </dependency>
+
+  <dependency>
+    <groupId>io.vertx</groupId>
+    <artifactId>vertx-pg-client</artifactId>
+    <version>4.5.11</version>
+  </dependency>
+
+
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.11.4</version>
+    <scope>test</scope>
+  </dependency>
+
+
+  <!-- Mockito Core -->
+  <dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>5.9.0</version>
+    <scope>test</scope>
+  </dependency>
+
+<!--  <dependency>-->
+<!--    <groupId>org.mockito</groupId>-->
+<!--    <artifactId>mockito-junit-jupiter</artifactId>-->
+<!--    <version>5.14.2</version>-->
+<!--    <scope>test</scope>-->
+<!--  </dependency>-->
+
+  <dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-junit-jupiter</artifactId>
+    <version>4.5.1</version>
+    <scope>test</scope>
+  </dependency>
+
+
+  <dependency>
+    <groupId>io.vertx</groupId>
+    <artifactId>vertx-junit5</artifactId>
+    <version>4.5.11</version>
+    <scope>test</scope>
+  </dependency>
+
+    <!-- Vert.x Dependencies -->
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-core</artifactId>
+      <version>4.5.11</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-web</artifactId>
+      <version>4.5.11</version>
+    </dependency>
+
+    <!-- Logging Dependencies -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.5.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.5.16</version>
+    </dependency>
+
+<!--    &lt;!&ndash; Remove this if you are using vertx-pg-client &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>io.vertx</groupId>-->
+<!--      <artifactId>vertx-jdbc-client</artifactId>-->
+<!--      <version>4.5.11</version>-->
+<!--    </dependency>-->
+
+<!--  &lt;!&ndash; TestContainers: PostgresSQL &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>org.testcontainers</groupId>-->
+<!--        <artifactId>postgresql</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--      </dependency>-->
+
+<!--      &lt;!&ndash; TestContainers: JUnit 5 integration &ndash;&gt;-->
+<!--      <dependency>-->
+<!--        <groupId>org.testcontainers</groupId>-->
+<!--        <artifactId>junit-jupiter</artifactId>-->
+<!--        <version>1.20.4</version>-->
+<!--        <scope>test</scope>-->
+<!--      </dependency>-->
+  <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter</artifactId>
+    <version>5.11.4</version>
+    <scope>test</scope>
+  </dependency>
+
+
+
+
+</dependencies>
+
+
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>15</source>
+          <target>15</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
