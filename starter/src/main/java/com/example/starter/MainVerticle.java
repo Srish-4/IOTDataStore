@@ -148,7 +148,7 @@ public class MainVerticle extends AbstractVerticle {
       if(ar.succeeded())
       {
         routingContext.response()
-          .setStatusCode(201)
+          .setStatusCode(200)
           .putHeader("content-type", "application/json")
           .end(ar.result().encode());
       }
@@ -244,15 +244,16 @@ public class MainVerticle extends AbstractVerticle {
       if(ar.succeeded())
       {
           routingContext.response()
+            .setStatusCode(204)
             .putHeader("content-type", "application/json")
-            .end(ar.result().encode());
+            .end();
       } else
       {
             // Internal server error
             routingContext.response()
-              .setStatusCode(500)
+              .setStatusCode(404)
               .putHeader("content-type", "application/json")
-              .end(new JsonObject().put("error", "Failed to delete resource").encode());
+              .end(new JsonObject().put("error", "Resource not found").encode());
       }
     });
 
